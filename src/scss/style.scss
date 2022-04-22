@@ -360,6 +360,7 @@ picture {
   &__card {
     position: relative;
     width: 238px;
+    height: auto;
     background-color: var(--containerColor);
     padding: 2rem 1.5rem 1.5rem;
     border-radius: 1rem;
