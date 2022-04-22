@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 import mixitup from 'mixitup';
+import ScrollReveal from 'scrollreveal';
 
 const navMenu = document.getElementById('nav-menu'),
   navToggle = document.getElementById('nav-toggle'),
@@ -115,3 +116,24 @@ function scrollActive() {
   });
 }
 window.addEventListener('scroll', scrollActive);
+
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true,
+});
+
+sr.reveal(`.home__title, .popular__container, .featured__filters`);
+sr.reveal(`.home__subtitle`, { delay: 800 });
+sr.reveal(`.home__icon`, { delay: 700 });
+sr.reveal(`.home__bike`, { delay: 600 });
+sr.reveal(`.home__img`, { delay: 1000 });
+sr.reveal(`.home__bike-data`, { delay: 900, interval: 100, origin: 'bottom' });
+sr.reveal(`.home__button`, { delay: 1000, origin: 'bottom' });
+sr.reveal(`.about__group, .offer__data`, { origin: 'left' });
+sr.reveal(`.about__data, offer__img`, { origin: 'right' });
+sr.reveal(`.featured__card, .logos__content, .footer__content`, {
+  interval: 100,
+});
